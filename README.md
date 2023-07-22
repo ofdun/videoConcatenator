@@ -54,4 +54,6 @@ python main.py
 
 ## Notes <a name = "notes"></a>
 
+I already provided intro, outro and videos just for an example.
+
 Project was written on ffmpeg and python without using any external  libraries by me - [@ofdun](https://github.com/ofdun)
