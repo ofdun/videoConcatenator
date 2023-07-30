@@ -33,7 +33,7 @@ def concat_videos(FFMPEG_PATH: str, output_filename='output.mp4') -> None:
         '-i', 'videos.txt',
         '-r', '24',
         '-s', '1920x1080',
-        '-c:v', 'libx264',
+        '-c:v', 'h264_nvenc', # libx264
         '-c:a', 'aac',
         '-b:v', cfg.get("DEFAULT", "video_bitrate"),
         '-b:a', cfg.get("DEFAULT", "audio_bitrate"),
@@ -48,7 +48,7 @@ def encode_video(FFMPEG_PATH: str, video_path: str) -> None:
         '-i', video_path,
         '-r', '24',
         '-s', '1920x1080',
-        '-c:v', 'libx264',
+        '-c:v', 'h264_nvenc', # libx264
         '-c:a', 'aac',
         '-b:v', cfg.get("DEFAULT", "video_bitrate"),
         '-b:a', cfg.get("DEFAULT", "video_bitrate"),
